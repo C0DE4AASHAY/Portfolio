@@ -1,26 +1,332 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+/* ── Dark Theme (Default) ─────────────────────────────── */
+:root,
+.dark {
+  --bg: #050505;
+  --bg-elevated: #0a0a0a;
+  --surface: rgba(255, 255, 255, 0.03);
+  --surface-hover: rgba(255, 255, 255, 0.06);
+  --border: rgba(255, 255, 255, 0.06);
+  --border-hover: rgba(255, 255, 255, 0.12);
+  --text-primary: #f5f5f7;
+  --text-secondary: #a1a1aa;
+  --text-tertiary: #71717a;
+  --accent: #6366f1;
+  --accent-glow: rgba(99, 102, 241, 0.15);
+  --glass-bg: rgba(255, 255, 255, 0.04);
+  --glass-border: rgba(255, 255, 255, 0.08);
+  --glass-blur: 20px;
+  --nav-bg: rgba(10, 10, 10, 0.8);
+  --nav-bg-idle: rgba(10, 10, 10, 0.4);
+  --nav-border: rgba(255, 255, 255, 0.08);
+  --nav-border-idle: rgba(255, 255, 255, 0.04);
+  --pill-bg: rgba(255, 255, 255, 0.08);
+  --card-bg: rgba(255, 255, 255, 0.03);
+  --card-bg-hover: rgba(255, 255, 255, 0.05);
+  --card-border: rgba(255, 255, 255, 0.06);
+  --card-border-hover: rgba(255, 255, 255, 0.12);
+  --card-highlight: rgba(255, 255, 255, 0.1);
+  --card-highlight-subtle: rgba(255, 255, 255, 0.08);
+  --card-highlight-faint: rgba(255, 255, 255, 0.06);
+  --icon-bg: rgba(255, 255, 255, 0.04);
+  --icon-border: rgba(255, 255, 255, 0.06);
+  --icon-border-hover: rgba(255, 255, 255, 0.12);
+  --tag-bg: rgba(255, 255, 255, 0.04);
+  --tag-border: rgba(255, 255, 255, 0.06);
+  --btn-primary-bg: #ffffff;
+  --btn-primary-text: #000000;
+  --btn-primary-hover: rgba(255, 255, 255, 0.9);
+  --btn-secondary-bg: rgba(255, 255, 255, 0.06);
+  --btn-secondary-border: rgba(255, 255, 255, 0.1);
+  --btn-secondary-text: #ffffff;
+  --btn-secondary-hover-bg: rgba(255, 255, 255, 0.1);
+  --btn-secondary-hover-border: rgba(255, 255, 255, 0.2);
+  --social-bg: rgba(255, 255, 255, 0.04);
+  --social-border: rgba(255, 255, 255, 0.06);
+  --social-hover-bg: rgba(255, 255, 255, 0.08);
+  --social-hover-border: rgba(255, 255, 255, 0.12);
+  --divider: rgba(255, 255, 255, 0.06);
+  --footer-border: rgba(255, 255, 255, 0.04);
+  --badge-bg: rgba(255, 255, 255, 0.04);
+  --badge-border: rgba(255, 255, 255, 0.06);
+  --scrollbar-thumb: rgba(255, 255, 255, 0.1);
+  --scrollbar-thumb-hover: rgba(255, 255, 255, 0.2);
+  --selection-bg: rgba(99, 102, 241, 0.3);
+  --gradient-text-from: #f5f5f7;
+  --gradient-text-to: #a1a1aa;
+  --particle-color: 148, 163, 184;
+  --cursor-glow: rgba(99, 102, 241, 0.4);
+  --cursor-glow-mid: rgba(99, 102, 241, 0.1);
+  --ambient-glow: rgba(99, 102, 241, 0.07);
+  --ambient-bg-glow: rgba(99, 102, 241, 0.06);
+  --ambient-bg-glow-mid: rgba(99, 102, 241, 0.02);
+  --featured-bg: rgba(99, 102, 241, 0.2);
+  --featured-text: #818cf8;
+  --featured-border: rgba(99, 102, 241, 0.2);
+  --accent-icon-bg: rgba(99, 102, 241, 0.1);
+  --accent-icon-border: rgba(99, 102, 241, 0.1);
+  --accent-icon-hover-bg: rgba(99, 102, 241, 0.15);
+  --accent-icon-hover-border: rgba(99, 102, 241, 0.2);
+  --status-dot: #34d399;
 }
 
+/* ── Light Theme ──────────────────────────────────────── */
+.light {
+  --bg: #fafafa;
+  --bg-elevated: #ffffff;
+  --surface: rgba(0, 0, 0, 0.02);
+  --surface-hover: rgba(0, 0, 0, 0.04);
+  --border: rgba(0, 0, 0, 0.06);
+  --border-hover: rgba(0, 0, 0, 0.12);
+  --text-primary: #171717;
+  --text-secondary: #525252;
+  --text-tertiary: #737373;
+  --accent: #4f46e5;
+  --accent-glow: rgba(79, 70, 229, 0.12);
+  --glass-bg: rgba(255, 255, 255, 0.7);
+  --glass-border: rgba(0, 0, 0, 0.06);
+  --glass-blur: 20px;
+  --nav-bg: rgba(255, 255, 255, 0.85);
+  --nav-bg-idle: rgba(255, 255, 255, 0.6);
+  --nav-border: rgba(0, 0, 0, 0.06);
+  --nav-border-idle: rgba(0, 0, 0, 0.03);
+  --pill-bg: rgba(0, 0, 0, 0.05);
+  --card-bg: rgba(255, 255, 255, 0.7);
+  --card-bg-hover: rgba(255, 255, 255, 0.9);
+  --card-border: rgba(0, 0, 0, 0.06);
+  --card-border-hover: rgba(0, 0, 0, 0.12);
+  --card-highlight: rgba(0, 0, 0, 0.04);
+  --card-highlight-subtle: rgba(0, 0, 0, 0.03);
+  --card-highlight-faint: rgba(0, 0, 0, 0.02);
+  --icon-bg: rgba(0, 0, 0, 0.03);
+  --icon-border: rgba(0, 0, 0, 0.06);
+  --icon-border-hover: rgba(0, 0, 0, 0.12);
+  --tag-bg: rgba(0, 0, 0, 0.04);
+  --tag-border: rgba(0, 0, 0, 0.06);
+  --btn-primary-bg: #171717;
+  --btn-primary-text: #ffffff;
+  --btn-primary-hover: rgba(23, 23, 23, 0.85);
+  --btn-secondary-bg: rgba(0, 0, 0, 0.04);
+  --btn-secondary-border: rgba(0, 0, 0, 0.1);
+  --btn-secondary-text: #171717;
+  --btn-secondary-hover-bg: rgba(0, 0, 0, 0.08);
+  --btn-secondary-hover-border: rgba(0, 0, 0, 0.2);
+  --social-bg: rgba(0, 0, 0, 0.03);
+  --social-border: rgba(0, 0, 0, 0.06);
+  --social-hover-bg: rgba(0, 0, 0, 0.06);
+  --social-hover-border: rgba(0, 0, 0, 0.12);
+  --divider: rgba(0, 0, 0, 0.06);
+  --footer-border: rgba(0, 0, 0, 0.06);
+  --badge-bg: rgba(0, 0, 0, 0.03);
+  --badge-border: rgba(0, 0, 0, 0.06);
+  --scrollbar-thumb: rgba(0, 0, 0, 0.12);
+  --scrollbar-thumb-hover: rgba(0, 0, 0, 0.2);
+  --selection-bg: rgba(79, 70, 229, 0.2);
+  --gradient-text-from: #171717;
+  --gradient-text-to: #525252;
+  --particle-color: 100, 116, 139;
+  --cursor-glow: rgba(79, 70, 229, 0.3);
+  --cursor-glow-mid: rgba(79, 70, 229, 0.08);
+  --ambient-glow: rgba(79, 70, 229, 0.05);
+  --ambient-bg-glow: rgba(79, 70, 229, 0.04);
+  --ambient-bg-glow-mid: rgba(79, 70, 229, 0.015);
+  --featured-bg: rgba(79, 70, 229, 0.1);
+  --featured-text: #4f46e5;
+  --featured-border: rgba(79, 70, 229, 0.15);
+  --accent-icon-bg: rgba(79, 70, 229, 0.08);
+  --accent-icon-border: rgba(79, 70, 229, 0.08);
+  --accent-icon-hover-bg: rgba(79, 70, 229, 0.12);
+  --accent-icon-hover-border: rgba(79, 70, 229, 0.15);
+  --status-dot: #10b981;
+}
+
+/* ── Tailwind Theme Tokens ────────────────────────────── */
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --color-bg: var(--bg);
+  --color-bg-elevated: var(--bg-elevated);
+  --color-surface: var(--surface);
+  --color-surface-hover: var(--surface-hover);
+  --color-border-custom: var(--border);
+  --color-border-hover: var(--border-hover);
+  --color-text-primary: var(--text-primary);
+  --color-text-secondary: var(--text-secondary);
+  --color-text-tertiary: var(--text-tertiary);
+  --color-accent: var(--accent);
+  --color-accent-glow: var(--accent-glow);
+  --color-glass-bg: var(--glass-bg);
+  --color-glass-border: var(--glass-border);
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, monospace;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+/* ── Base ─────────────────────────────────────────────── */
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background: var(--bg);
+  color: var(--text-primary);
+  font-family: var(--font-sans);
+  overflow-x: hidden;
+  min-height: 100vh;
+  transition: background-color 0.5s ease, color 0.4s ease;
 }
+
+::selection {
+  background: var(--selection-bg);
+  color: var(--text-primary);
+}
+
+/* ── Scrollbar ────────────────────────────────────────── */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: var(--scrollbar-thumb);
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--scrollbar-thumb-hover);
+}
+
+/* ── Glass Card ───────────────────────────────────────── */
+.glass {
+  background: var(--glass-bg);
+  backdrop-filter: blur(var(--glass-blur));
+  -webkit-backdrop-filter: blur(var(--glass-blur));
+  border: 1px solid var(--glass-border);
+  border-radius: 16px;
+}
+
+.glass-strong {
+  background: var(--card-bg-hover);
+  backdrop-filter: blur(32px);
+  -webkit-backdrop-filter: blur(32px);
+  border: 1px solid var(--card-border-hover);
+  border-radius: 16px;
+}
+
+/* ── Reduced Motion ───────────────────────────────────── */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+  html {
+    scroll-behavior: auto;
+  }
+}
+
+/* ── Focus visible ────────────────────────────────────── */
+:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+
+/* ── Gradient text ────────────────────────────────────── */
+.gradient-text {
+  background: linear-gradient(135deg, var(--gradient-text-from) 0%, var(--gradient-text-to) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* ── Section spacing ──────────────────────────────────── */
+.section-padding {
+  padding: 6rem 1.5rem;
+}
+
+@media (min-width: 768px) {
+  .section-padding {
+    padding: 8rem 2rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .section-padding {
+    padding: 10rem 4rem;
+  }
+}
+
+/* ── Theme transition for all themed elements ─────────── */
+.glass,
+.glass-strong {
+  transition: background-color 0.5s ease, border-color 0.4s ease;
+}
+
+/* ── Shimmer button hover animation ──────────────────── */
+@keyframes shimmer-sweep {
+  0%   { transform: translateX(-120%) skewX(-20deg); }
+  100% { transform: translateX(220%) skewX(-20deg); }
+}
+
+.btn-shimmer-wrap {
+  display: inline-block;
+  position: relative;
+}
+
+.btn-shimmer-wrap > * {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  position: relative;
+  overflow: hidden;
+  transition:
+    transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1),
+    box-shadow 0.3s ease,
+    opacity 0.3s ease;
+}
+
+/* Shimmer pseudo-element */
+.btn-shimmer-wrap > *::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  width: 40%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    transparent 0%,
+    rgba(255, 255, 255, 0.25) 50%,
+    transparent 100%
+  );
+  transform: translateX(-120%) skewX(-20deg);
+  pointer-events: none;
+  border-radius: inherit;
+}
+
+/* Lift + glow on hover */
+.btn-shimmer-wrap:hover > * {
+  transform: translateY(-3px) scale(1.04);
+  box-shadow:
+    0 8px 32px rgba(99, 102, 241, 0.35),
+    0 2px 12px rgba(99, 102, 241, 0.2);
+}
+
+/* Trigger shimmer sweep on hover */
+.btn-shimmer-wrap:hover > *::before {
+  animation: shimmer-sweep 0.55s ease forwards;
+}
+
+/* Press down on click */
+.btn-shimmer-wrap:active > * {
+  transform: translateY(0px) scale(0.97);
+  box-shadow: 0 2px 8px rgba(99, 102, 241, 0.2);
+}
+

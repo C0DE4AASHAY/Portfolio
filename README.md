@@ -1,36 +1,101 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Aashay Kashyap — Portfolio
+
+A premium, futuristic developer portfolio built with Next.js, React, TypeScript, Tailwind CSS, and Framer Motion.
+
+## Features
+
+- **Dark cinematic theme** with glassmorphism UI inspired by Apple/iOS design
+- **Interactive particle background** that reacts to cursor movement
+- **Custom cursor glow** with smooth lerp interpolation
+- **Floating glass pill navbar** with animated active-section indicator
+- **Magnetic CTA buttons** with spring physics
+- **Staggered scroll-reveal animations** on every section
+- **Fully responsive** — cursor effects auto-disable on mobile
+- **Accessible** — semantic HTML, ARIA labels, `prefers-reduced-motion` support
+- **SEO optimized** — Open Graph, Twitter cards, meta descriptions
+
+## Tech Stack
+
+- [Next.js 16](https://nextjs.org/) — React framework
+- [React 19](https://react.dev/) — UI library
+- [TypeScript](https://www.typescriptlang.org/) — Type safety
+- [Tailwind CSS 4](https://tailwindcss.com/) — Utility-first styling
+- [Framer Motion](https://www.framer.com/motion/) — Animations
+- [Lucide React](https://lucide.dev/) — Icons
 
 ## Getting Started
 
-First, run the development server:
-
 ```bash
+# Install dependencies
+npm install
+
+# Start development server
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000) to view the site.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Customization
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+All personal data lives in a single file for easy editing:
 
-## Learn More
+```
+src/data/site.ts
+```
 
-To learn more about Next.js, take a look at the following resources:
+Update the following:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+| Field | What to change |
+|-------|---------------|
+| `siteConfig.name` | Your name |
+| `siteConfig.email` | Your email address |
+| `siteConfig.socials` | GitHub, LinkedIn, Twitter URLs |
+| `aboutText` | Your bio paragraphs |
+| `skills` | Technologies you know |
+| `projects` | Your real projects (title, description, tech, links) |
+| `philosophy` | What you like building |
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## Project Structure
 
-## Deploy on Vercel
+```
+src/
+├── app/
+│   ├── globals.css           # Design system & tokens
+│   ├── layout.tsx            # Root layout + SEO metadata
+│   └── page.tsx              # Main page
+├── components/
+│   ├── Background.tsx        # Canvas particle system
+│   ├── CursorEffect.tsx      # Custom cursor glow
+│   ├── Navbar.tsx            # Floating glass navbar
+│   ├── Hero.tsx              # Hero section
+│   ├── About.tsx             # About section
+│   ├── Skills.tsx            # Skill cards
+│   ├── Projects.tsx          # Project showcase
+│   ├── Philosophy.tsx        # "What I Build" section
+│   ├── Contact.tsx           # Contact CTA + socials
+│   ├── Footer.tsx            # Footer
+│   ├── GlassCard.tsx         # Reusable glass card
+│   ├── SectionHeading.tsx    # Reusable section header
+│   └── MagneticButton.tsx    # Magnetic hover wrapper
+├── data/
+│   └── site.ts               # ⭐ All personal data
+└── hooks/
+    └── use-utils.ts          # Custom React hooks
+```
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## Build
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+```bash
+npm run build    # Production build
+npm run start    # Serve production build
+```
+
+## Deploy
+
+Deploy instantly on [Vercel](https://vercel.com/):
+
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new)
+
+## License
+
+© 2026 Aashay Kashyap. All rights reserved.
