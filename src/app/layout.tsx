@@ -16,7 +16,7 @@ const jetbrainsMono = JetBrains_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Aashay Kashyap — Professional Coder & Developer",
+  title: "Aashay Kashyap",
   description:
     "I build modern applications, creative tools, and digital experiences using code. Portfolio of Aashay Kashyap — developer, builder, creator.",
   keywords: [
