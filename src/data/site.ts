@@ -11,9 +11,11 @@ export const siteConfig = {
   url: "zhttps://www.aashxy.cyou/", // Replace with your domain
   email: "kashyap.aashay123@gmail.com", // Replace with your email
   socials: {
-    github: "https://github.com/C0DE4AASHAY", // Replace
-    linkedin: "https://linkedin.com/in/aashaykashyap", // Replace
-    twitter: "https://twitter.com/aashaykashyap", // Replace
+    github: "https://github.com/C0DE4AASHAY",
+    linkedin: "https://linkedin.com/in/aashaykashyap",
+    discord: "https://discord.gg/gYaHH57SsK", // Replace with your Discord profile or server
+    instagram: "https://instagram.com/aashay_kashyap", // Replace with your Instagram profile
+    twitter: "https://twitter.com/aashaykashyap",
   },
 };
 

@@ -4,7 +4,7 @@ import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
 import { ArrowUpRight } from "lucide-react";
 import { siteConfig } from "@/data/site";
-import { GitHubIcon, LinkedInIcon, XIcon, GmailIcon } from "@/components/icons/BrandIcons";
+import { GitHubIcon, LinkedInIcon, DiscordIcon, InstagramIcon } from "@/components/icons/BrandIcons";
 import MagneticButton from "@/components/MagneticButton";
 
 const socials = [
@@ -19,20 +19,32 @@ const socials = [
     icon: <LinkedInIcon size={20} />,
   },
   {
-    label: "X",
-    href: siteConfig.socials.twitter,
-    icon: <XIcon size={20} />,
+    label: "Discord",
+    href: siteConfig.socials.discord,
+    icon: <DiscordIcon size={20} />,
   },
   {
-    label: "Email",
-    href: `mailto:${siteConfig.email}`,
-    icon: <GmailIcon size={20} />,
+    label: "Instagram",
+    href: siteConfig.socials.instagram,
+    icon: <InstagramIcon size={20} />,
   },
 ];
 
 export default function Contact() {
   const ref = useRef<HTMLDivElement>(null);
   const inView = useInView(ref, { once: true, margin: "-100px" });
+
+  const handleGetInTouch = (e: React.MouseEvent<HTMLAnchorElement>) => {
+    const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
+    if (!isMobile) {
+      e.preventDefault();
+      window.open(
+        `https://mail.google.com/mail/?view=cm&fs=1&to=${encodeURIComponent(siteConfig.email)}`,
+        "_blank",
+        "noopener,noreferrer"
+      );
+    }
+  };
 
   return (
     <section id="contact" className="section-padding" aria-label="Contact">
@@ -79,6 +91,9 @@ export default function Contact() {
           <MagneticButton>
             <a
               href={`mailto:${siteConfig.email}`}
+              onClick={handleGetInTouch}
+              target="_blank"
+              rel="noopener noreferrer"
               className="inline-flex items-center gap-2 px-8 py-4 rounded-full text-sm font-semibold transition-colors duration-300"
               style={{
                 background: "var(--btn-primary-bg)",
@@ -108,8 +123,8 @@ export default function Contact() {
             <MagneticButton key={social.label} strength={0.2}>
               <a
                 href={social.href}
-                target={social.label !== "Email" ? "_blank" : undefined}
-                rel={social.label !== "Email" ? "noopener noreferrer" : undefined}
+                target="_blank"
+                rel="noopener noreferrer"
                 className="w-12 h-12 rounded-full flex items-center justify-center text-text-secondary hover:text-text-primary transition-all duration-300"
                 style={{
                   background: "var(--social-bg)",

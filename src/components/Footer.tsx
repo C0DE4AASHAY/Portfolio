@@ -1,12 +1,13 @@
 "use client";
 
 import { siteConfig } from "@/data/site";
-import { GitHubIcon, LinkedInIcon, XIcon } from "@/components/icons/BrandIcons";
+import { GitHubIcon, InstagramIcon, LinkedInIcon, DiscordIcon } from "@/components/icons/BrandIcons";
 
 const footerSocials = [
   { label: "GitHub", href: siteConfig.socials.github, icon: <GitHubIcon size={16} /> },
   { label: "LinkedIn", href: siteConfig.socials.linkedin, icon: <LinkedInIcon size={16} /> },
-  { label: "X", href: siteConfig.socials.twitter, icon: <XIcon size={16} /> },
+  { label: "Discord", href: siteConfig.socials.discord, icon: <DiscordIcon size={16} /> },
+  { label: "Instagram", href: siteConfig.socials.instagram, icon: <InstagramIcon size={16} /> }
 ];
 
 export default function Footer() {
