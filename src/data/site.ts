@@ -6,6 +6,7 @@
 export const siteConfig = {
   name: "Aashay Kashyap",
   title: "Professional Coder & Developer",
+  avatar: "/elon.png", // Place your photo in the public/ folder (e.g. public/avatar.jpg)
   description:
     "I build modern applications, creative tools, and digital experiences using code.",
   url: "zhttps://www.aashxy.cyou/", // Replace with your domain
