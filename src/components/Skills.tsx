@@ -12,6 +12,7 @@ import {
   Atom,
   Triangle,
 } from "lucide-react";
+import { GitHubIcon } from "@/components/icons/BrandIcons";
 import { skills } from "@/data/site";
 import type { Skill } from "@/data/site";
 import SectionHeading from "@/components/SectionHeading";
@@ -26,9 +27,15 @@ const iconMap: Record<string, React.ReactNode> = {
   "file-json": <FileJson size={24} />,
   atom: <Atom size={24} />,
   triangle: <Triangle size={24} />,
+  github: <GitHubIcon size={24} />,
 };
 
 function SkillCard({ skill, index }: { skill: Skill; index: number }) {
+  const isWhite =
+    skill.color.toLowerCase() === "#ffffff" ||
+    skill.color.toLowerCase() === "#fff";
+  const iconColor = isWhite ? "var(--text-primary)" : skill.color;
+
   return (
     <motion.div
       initial={{ opacity: 0, y: 30 }}
@@ -72,7 +79,9 @@ function SkillCard({ skill, index }: { skill: Skill; index: number }) {
         <div
           className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none"
           style={{
-            background: `radial-gradient(circle at 50% 0%, ${skill.color}15, transparent 60%)`,
+            background: isWhite
+              ? "radial-gradient(circle at 50% 0%, var(--card-highlight), transparent 60%)"
+              : `radial-gradient(circle at 50% 0%, ${skill.color}15, transparent 60%)`,
           }}
         />
 
@@ -82,7 +91,7 @@ function SkillCard({ skill, index }: { skill: Skill; index: number }) {
           style={{
             background: "var(--icon-bg)",
             border: "1px solid var(--icon-border)",
-            color: skill.color,
+            color: iconColor,
           }}
         >
           {iconMap[skill.icon] || <Code size={24} />}

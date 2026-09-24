@@ -24,8 +24,8 @@ export const aboutText = [
 
 export interface Skill {
   name: string;
-  icon: string; // lucide icon name
-  category: "language" | "frontend" | "framework";
+  icon: string; // lucide icon name or brand icon
+  category: "language" | "frontend" | "framework" | "tool";
   color: string;
 }
 
@@ -52,6 +52,12 @@ export const skills: Skill[] = [
     name: "Next.js",
     icon: "triangle",
     category: "framework",
+    color: "#ffffff",
+  },
+  {
+    name: "GitHub",
+    icon: "github",
+    category: "tool",
     color: "#ffffff",
   },
 ];

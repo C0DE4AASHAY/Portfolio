@@ -82,7 +82,7 @@ export default function About() {
               className="flex gap-8 pt-4"
             >
               {[
-                { value: "9+", label: "Technologies" },
+                { value: "10+", label: "Technologies" },
                 { value: "∞", label: "Curiosity" },
                 { value: "24/7", label: "Building" },
               ].map((stat) => (
