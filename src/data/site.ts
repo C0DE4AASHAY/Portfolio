@@ -78,7 +78,7 @@ export const projects: Project[] = [
       "This is a Attendance System which keep tracking of the attendance of the students. using QR Code scanning. and generate reports",
     technologies: ["Typescript", "CSS", "JavaScript"],
     github: "https://github.com/C0DE4AASHAY/attendance", // Replace
-    live: "https://attendance-fawn-alpha.vercel.app", // Replace
+    live: "https://attendance-eosin-mu-88.vercel.app", // Replace
     image: "/projects/devflow.png",
     featured: true,
   },
