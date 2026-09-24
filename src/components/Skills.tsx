@@ -118,7 +118,7 @@ export default function Skills() {
         <SectionHeading
           label="Skills"
           title="Technologies I Work With"
-          description="From systems programming to modern web frameworks — I work across the full stack."
+          description="From systems programming to modern web frameworks I work across the full stack."
         />
 
         <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-4">

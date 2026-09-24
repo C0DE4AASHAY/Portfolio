@@ -8,7 +8,7 @@ export const siteConfig = {
   title: "Professional Coder & Developer",
   description:
     "I build modern applications, creative tools, and digital experiences using code.",
-  url: "https://aashaykashyap.dev", // Replace with your domain
+  url: "zhttps://www.aashxy.cyou/", // Replace with your domain
   email: "kashyap.aashay123@gmail.com", // Replace with your email
   socials: {
     github: "https://github.com/C0DE4AASHAY", // Replace
@@ -90,9 +90,9 @@ export const projects: Project[] = [
   },
   {
     id: "codeforge",
-    title: "Brightness-controller",
+    title: "Brightness Controller",
     description:
-      "A browser-based code editor with real-time collaboration, syntax highlighting, and AI-powered code suggestions.",
+      "This is a Brightness Controller by which you can control your system brightness using your fingers.",
     longDescription:
       "Designed for pair programming sessions with integrated terminal and Git support.",
     technologies: ["Batchfile", "PowerShell", "Python"],
