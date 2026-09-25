@@ -6,7 +6,7 @@
 export const siteConfig = {
   name: "Aashay Kashyap",
   title: "Professional Coder & Developer",
-  avatar: "/elon.png", // Place your photo in the public/ folder (e.g. public/avatar.jpg)
+  avatar: "/elon 2.png", // Place your photo in the public/ folder (e.g. public/avatar.jpg)
   description:
     "I build modern applications, creative tools, and digital experiences using code.",
   url: "zhttps://www.aashxy.cyou/", // Replace with your domain
@@ -79,7 +79,7 @@ export interface Project {
 
 export const projects: Project[] = [
   {
-    id: "devflow",
+    id: "devflow", //Attendance System
     title: "Attendance System",
     description:
       "This is a Attendance System which keep tracking of the attendance of the students. using QR Code scanning.",
@@ -92,7 +92,7 @@ export const projects: Project[] = [
     featured: true,
   },
   {
-    id: "codeforge",
+    id: "codeforge",//Brightness Controller
     title: "Brightness Controller",
     description:
       "This is a Brightness Controller by which you can control your system brightness using your fingers.",

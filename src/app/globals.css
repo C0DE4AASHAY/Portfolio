@@ -55,6 +55,9 @@
   --selection-bg: rgba(99, 102, 241, 0.3);
   --gradient-text-from: #f5f5f7;
   --gradient-text-to: #a1a1aa;
+  --shine-beam-color: #ffffff;
+  --shine-beam-glow: rgba(165, 180, 252, 0.9);
+  --shine-beam-drop: rgba(99, 102, 241, 0.5);
   --particle-color: 148, 163, 184;
   --cursor-glow: rgba(99, 102, 241, 0.4);
   --cursor-glow-mid: rgba(99, 102, 241, 0.1);
@@ -125,6 +128,9 @@
   --selection-bg: rgba(79, 70, 229, 0.2);
   --gradient-text-from: #171717;
   --gradient-text-to: #525252;
+  --shine-beam-color: #4f46e5;
+  --shine-beam-glow: rgba(99, 102, 241, 0.8);
+  --shine-beam-drop: rgba(79, 70, 229, 0.35);
   --particle-color: 100, 116, 139;
   --cursor-glow: rgba(79, 70, 229, 0.3);
   --cursor-glow-mid: rgba(79, 70, 229, 0.08);
@@ -245,6 +251,95 @@ body {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
+}
+
+/* ── Shining Text Effect ──────────────────────────────── */
+.shine-wrapper {
+  position: relative;
+  display: inline-block;
+  cursor: default;
+  overflow: visible;
+}
+
+.shine-text-base {
+  background: linear-gradient(135deg, var(--gradient-text-from) 0%, var(--gradient-text-to) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  display: inline-block;
+  padding: 0.08em 0.08em 0.22em 0.04em;
+  overflow: visible;
+  transition: filter 0.4s ease;
+}
+
+.shine-text-overlay {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  user-select: none;
+  font: inherit;
+  letter-spacing: inherit;
+  line-height: inherit;
+  text-align: inherit;
+  padding: 0.08em 0.08em 0.22em 0.04em;
+  box-sizing: border-box;
+  overflow: visible;
+  background: linear-gradient(
+    115deg,
+    transparent 0%,
+    transparent 36%,
+    var(--shine-beam-glow) 46%,
+    var(--shine-beam-color) 50%,
+    var(--shine-beam-glow) 54%,
+    transparent 64%,
+    transparent 100%
+  );
+  background-size: 250% 100%;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: shine-sweep 5s cubic-bezier(0.4, 0, 0.2, 1) infinite;
+  animation-delay: 1.1s;
+  will-change: background-position, filter;
+  filter: drop-shadow(0 0 14px var(--shine-beam-drop));
+}
+
+@keyframes shine-sweep {
+  0% {
+    background-position: 120% 0;
+  }
+  38% {
+    background-position: -20% 0;
+  }
+  100% {
+    background-position: -20% 0;
+  }
+}
+
+@keyframes shine-sweep-hover {
+  0% {
+    background-position: 120% 0;
+  }
+  100% {
+    background-position: -20% 0;
+  }
+}
+
+.shine-wrapper:hover .shine-text-overlay {
+  animation: shine-sweep-hover 1.5s cubic-bezier(0.4, 0, 0.2, 1) infinite;
+  animation-delay: 0s;
+  filter: drop-shadow(0 0 20px var(--shine-beam-drop));
+}
+
+.shine-wrapper:hover .shine-text-base {
+  filter: drop-shadow(0 0 16px var(--accent-glow));
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .shine-text-overlay {
+    animation: none;
+    display: none;
+  }
 }
 
 /* ── Section spacing ──────────────────────────────────── */

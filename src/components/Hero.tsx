@@ -42,9 +42,14 @@ export default function Hero() {
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.3, ease: [0.25, 0.1, 0.25, 1] }}
-          className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-bold tracking-tighter leading-[0.95]"
+          className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-bold tracking-tighter leading-[1.08] sm:leading-[1.04] py-1"
         >
-          <span className="gradient-text">{siteConfig.name}</span>
+          <span className="shine-wrapper">
+            <span className="shine-text-base">{siteConfig.name}</span>
+            <span className="shine-text-overlay" aria-hidden="true">
+              {siteConfig.name}
+            </span>
+          </span>
         </motion.h1>
 
         {/* Title */}
