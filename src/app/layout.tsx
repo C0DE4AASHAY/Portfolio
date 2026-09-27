@@ -31,7 +31,7 @@ export const metadata: Metadata = {
   ],
   authors: [{ name: "Aashay Kashyap" }],
   openGraph: {
-    title: "Aashay Kashyap — Professional Coder & Developer",
+    title: "Aashay Kashyap Professional Coder & Developer",
     description:
       "I build modern applications, creative tools, and digital experiences using code.",
     url: "https://aashaykashyap.dev",
@@ -41,7 +41,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Aashay Kashyap — Professional Coder & Developer",
+    title: "Aashay Kashyap Professional Coder & Developer",
     description:
       "I build modern applications, creative tools, and digital experiences using code.",
   },
