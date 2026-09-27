@@ -13,7 +13,7 @@ export const siteConfig = {
   email: "kashyap.aashay123@gmail.com", // Replace with your email
   socials: {
     github: "https://github.com/C0DE4AASHAY",
-    linkedin: "https://linkedin.com/in/aashaykashyap",
+    linkedin: "https://www.linkedin.com/in/aashay-kashyap-a54b322b5/",
     discord: "https://discord.gg/gYaHH57SsK", // Replace with your Discord profile or server
     instagram: "https://instagram.com/aashay_kashyap", // Replace with your Instagram profile
     twitter: "https://twitter.com/aashaykashyap",
