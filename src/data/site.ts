@@ -5,7 +5,7 @@
 
 export const siteConfig = {
   name: "Aashay Kashyap",
-  title: "Professional Coder & Developer",
+  title: "Coder & Developer",
   avatar: "/elon 2.png", // Place your photo in the public/ folder (e.g. public/avatar.jpg)
   description:
     "I build modern applications, creative tools, and digital experiences using code.",
@@ -13,7 +13,7 @@ export const siteConfig = {
   email: "kashyap.aashay123@gmail.com", // Replace with your email
   socials: {
     github: "https://github.com/C0DE4AASHAY",
-    linkedin: "https://www.linkedin.com/in/in/aashxy/",
+    linkedin: "https://www.linkedin.com/in/aashxy/",
     discord: "https://discord.gg/gYaHH57SsK", // Replace with your Discord profile or server
     instagram: "https://instagram.com/aashay_kashyap", // Replace with your Instagram profile
     twitter: "https://twitter.com/aashaykashyap",
